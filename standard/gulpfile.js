@@ -9,28 +9,35 @@ const $ = gulpLoadPlugins();
 gulp.task('scripts', function() {
     return tsc.src()
         .pipe($.plumber())
-            .pipe(tsc())
-            .js.pipe($.uglify())
-            .pipe($.rename({suffix: '.min'}))
-            .pipe(gulp.dest('dist'));
+        .pipe(tsc())
+        .js.pipe($.uglify())
+        .pipe($.rename({suffix: '.min'}))
+        .pipe(gulp.dest('build/dist'));
 });
 
-gulp.task('imgMove', function() {
-    return gulp.src('src/**/*.[jpg|gif|png]')
-        .pipe($.flatten())
-        .pipe(gulp.dest('dist'));
+gulp.task('sass', function() {
+    return gulp.src('app/sass/**/*.scss')
+        .pipe($.plumber())
+        .pipe($.sass())
+        .pipe($.autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe($.cleanCss())
+        .pipe($.rename({suffix: '.min'}))
+        .pipe(gulp.dest('build/css'));
 });
 
 gulp.task('watch', function() {
     browserSync.init({
-        files: ['dist/**/*.js'],
+        files: ['build/**/*.*'],
         server: {
             baseDir: './'
         },
         port: 8080
     });
-    gulp.watch('src/**/*.ts' , ['scripts']);
-    gulp.watch('src/**/*.[jpg|gif|png]', ['imgMove']);
+    gulp.watch('app/src/**/*.ts' , ['scripts']);
+    gulp.watch('app/sass/**/*.scss', ['sass']);
 });
 
 gulp.task('default', ['watch']);

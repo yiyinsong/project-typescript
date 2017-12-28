@@ -7,4 +7,9 @@ const test = (student: number) => {
     console.log(student);
 }
 
-test('aaa');lad
+test(5559);
+class Human {
+    constructor() {
+        
+    }
+}
