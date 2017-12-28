@@ -7,4 +7,4 @@ const test = (student: number) => {
     console.log(student);
 }
 
-test(3);
+test('aaa');lad
