@@ -42,7 +42,8 @@ gulp.task('server', function() {
         browserSync.init({
             proxy: 'http://syy.jdhui.com:3000',
             files: ['build/**/*.*', 'views/**/*.*'],
-            port: 8081
+            port: 8081, 
+            notify: false
         }, function() {
             console.log('---------------ok---------------');
         });
