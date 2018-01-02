@@ -10,7 +10,7 @@ gulp.task('scripts', function() {
     return tsc.src()
         .pipe($.plumber())
         .pipe(tsc())
-        .js.pipe(gulp.src('build/dist'))
+        .js.pipe(gulp.dest('build/dist'))
         .pipe($.uglify())
         .pipe($.rename({suffix: '.min'}))
         .pipe(gulp.dest('build/dist'));
@@ -29,16 +29,26 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('build/css'));
 });
 
-gulp.task('watch', function() {
-    browserSync.init({
-        files: ['build/**/*.*'],
-        server: {
-            baseDir: './'
-        },
-        port: 8080
+gulp.task('server', function() {
+    $.nodemon({
+        script: 'build/dist/app.min.js',
+        ignore: [
+            "build/**/*.*",
+            "views/**/*.*",
+            "node_modules/",
+        ],
+        env: { 'NODE_ENV': 'development' }
+    }).on('start', function() {
+        browserSync.init({
+            proxy: 'http://syy.jdhui.com:3000',
+            files: ['build/**/*.*', 'views/**/*.*'],
+            port: 8081
+        }, function() {
+            console.log('---------------ok---------------');
+        });
     });
     gulp.watch('app/src/**/*.ts' , ['scripts']);
     gulp.watch('app/sass/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['server']);

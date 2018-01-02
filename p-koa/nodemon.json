@@ -1,0 +1,24 @@
+{
+	"restartable": "rs",
+	"ignore": [
+		".git",
+		".svn",
+		"node_modules/**/node_modules",
+		"build/",
+		"views/"
+	],
+	"verbose": true,
+	"execMap": {
+		"ts": "node --harmony",
+		"js": "node --harmony",
+        "pug": "node --harmony"
+	},
+	"watch": [
+		"app/",
+		"gulpfile.js"
+	],
+	"env": {
+		"NODE_ENV": "development"
+	},
+	"ext": "ts js json"
+}
