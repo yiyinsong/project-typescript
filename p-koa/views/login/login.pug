@@ -1,4 +1,16 @@
 extends ../includes/header.pug
 block content
-    .container
-        h1 哈哈登录啦
+    .login-body
+        .login-bg
+            img(src="/images/lbg1.jpg", alt="")
+        .login-wrapper
+            h2 账号登录
+            form.login-form
+                .login-group
+                    input.login-input(type="text", placeholder="手机号码")
+                .login-group
+                    input.login-input(type="password", placeholder="密码")
+                .login-group
+                    span.btn.btn-block.btn-info.btn-lg 登录
+                    .login-to-reg
+                        a#submit(href="/register") 没有账号？立即注册
