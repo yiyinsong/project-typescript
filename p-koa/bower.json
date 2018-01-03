@@ -1,0 +1,21 @@
+{
+  "name": "project-koa",
+  "description": "typescript && node standard",
+  "main": "index.js",
+  "authors": [
+    "yiyinsong <390396674@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/yiyinsong/project-typescript",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

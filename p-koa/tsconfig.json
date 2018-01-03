@@ -6,7 +6,8 @@
         "removeComments": true,
         "preserveConstEnums": true,
         "sourceMap": true,
-        "outDir": "build/dist"
+        "outDir": "build/dist",
+        "lib": ["dom", "es2015.promise", "es5"]
     },
     "exclude": [
         "node_modules"
