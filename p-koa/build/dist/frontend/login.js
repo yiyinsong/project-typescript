@@ -1,5 +1,13 @@
 var Login = (function () {
     function Login() {
+        var _this = this;
+        this.submitHandle = function () {
+            if (!_this.checkTel())
+                return;
+            if (!_this.checkPwd())
+                return;
+            $('form').submit();
+        };
     }
     Login.prototype.alert = function (text) {
         return $('#modal').find('.alert-text').html(text).end().modal({
@@ -35,12 +43,4 @@ var Login = (function () {
     return Login;
 }());
 var login = new Login();
-$('#submit').on('click', function (e) {
-    var _ct = login.checkTel();
-    if (!_ct)
-        return;
-    var _cp = login.checkPwd();
-    if (!_cp)
-        return;
-    $('form').submit();
-});
+$('#submit').on('click', login.submitHandle);

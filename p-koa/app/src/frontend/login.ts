@@ -1,18 +1,29 @@
 interface LoginInterface {
-    alert(text: string): JQuery<HTMLElement>;
     checkTel(): boolean;
     checkPwd(): boolean;
+    submitHandle(): void;
 }
 
 class Login implements LoginInterface {
     constructor() {
 
     }
-    alert(text: string): JQuery<HTMLElement> {
+    /**
+     * @function alert
+     * @description  弹出提示
+     * @param text 
+     * @return JQuery<HTMLElement> 返回jquery对象
+     */
+    private alert(text: string): JQuery<HTMLElement> {
         return $('#modal').find('.alert-text').html(text).end().modal({
             show: true
         });
     }
+    /**
+     * @function checkTel
+     * @description  验证手机号码
+     * @return boolean 验证是否通过
+     */
     checkTel(): boolean {
         if($('#modelTel').val() === '') {
             this.alert('请填写电话号码');
@@ -24,6 +35,11 @@ class Login implements LoginInterface {
             return true;
         }
     }
+    /**
+     * @function checkPwd
+     * @description  验证密码
+     * @return boolean 验证是否通过
+     */
     checkPwd(): boolean {
         if($('#modelPwd').val() === '') {
             this.alert('请填写密码');
@@ -35,13 +51,17 @@ class Login implements LoginInterface {
             return true;
         }
     }
+    /**
+     * @function submit
+     * @description  验证提交表单
+     * @return void
+     */
+    submitHandle = ():void =>  {
+        if(!this.checkTel()) return;
+        if(!this.checkPwd()) return;
+        $('form').submit();
+    }
 }
 
 const login: Login = new Login();
-$('#submit').on('click', (e) => {
-    const _ct = login.checkTel();
-    if(!_ct) return;
-    const _cp = login.checkPwd();
-    if(!_cp) return;
-    $('form').submit();
-});
+$('#submit').on('click', login.submitHandle);
