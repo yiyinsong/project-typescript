@@ -9,4 +9,5 @@ router.get('/', function (ctx, next) {
     ctx.body = 'haha';
 });
 router.get('/login', loginController.login);
+router.post('/login/action', loginController.loginAction);
 exports.default = router;

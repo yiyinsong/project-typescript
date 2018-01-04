@@ -15,5 +15,6 @@ router.get('/', (ctx, next): void => {
 });
 
 router.get('/login', loginController.login);
+router.post('/login/action', loginController.loginAction);
 
 export default router;

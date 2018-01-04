@@ -52,6 +52,14 @@ var LoginController = (function () {
             });
         });
     };
+    LoginController.prototype.loginAction = function (ctx, next) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                ctx.body = ctx.request.body;
+                return [2];
+            });
+        });
+    };
     return LoginController;
 }());
 exports.default = LoginController;

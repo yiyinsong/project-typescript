@@ -19,6 +19,15 @@ class LoginController implements LoginInterface{
             title: '登录'
         });
     }
+    /**
+     * @description 登录处理
+     * @param ctx koa上下文
+     * @param next koa中间件next指针
+     * @returns {Promise<void>}
+     */
+    public async loginAction(ctx: any, next: any): Promise<void>{
+        ctx.body = ctx.request.body;
+    }
 }
 
 export default LoginController;
