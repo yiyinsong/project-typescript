@@ -60,7 +60,28 @@ var LoginController = (function () {
             });
         });
     };
+    LoginController.prototype.register = function (ctx, next) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4, ctx.render('login/register', {
+                            title: '注册'
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2];
+                }
+            });
+        });
+    };
+    LoginController.prototype.registerAction = function (ctx, next) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                ctx.body = ctx.request.body;
+                return [2];
+            });
+        });
+    };
     return LoginController;
 }());
 exports.default = LoginController;
-//# sourceMappingURL=login.js.map

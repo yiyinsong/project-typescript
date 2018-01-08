@@ -1,10 +1,15 @@
 $color_black: #000;
 $color_blue: #2899f7;
+$color_white: #fff;
+$color_e: #eee;
+$color_3: #333;
+$color_9: #999;
+$color_claret: #d03c3c;
 html,body {
     margin: 0;
     padding: 0;
     font-size: 12px; 
-    color: #333;
+    color: $color_3;
     height: 100%;
 }
 .login-body {
@@ -13,7 +18,6 @@ html,body {
     position: relative;
     .login-bg {
         width: 100%;
-        height: 100%;
         background-color: $color_black;
         img {
             max-width: 100%;
@@ -23,11 +27,11 @@ html,body {
     }
     .login-wrapper {
         position: absolute;
-        right: 150px;
         width: 380px;
-        background-color: #fff;
+        background-color: $color_white;
         padding: 20px 30px 40px 30px;
         top: 150px;
+        left: 60%;
         h2 {
             font-size: 24px;
             text-align: center;
@@ -36,7 +40,7 @@ html,body {
             margin-top: 15px;
         }
         .login-input {
-            border: 1px solid #eee;
+            border: 1px solid $color_e;
             padding: 15px 10px;
             width: 100%;
             box-sizing: border-box;
@@ -54,5 +58,20 @@ html,body {
                 color: $color_blue;
             }
         }
+    }
+    .login-footer {
+        text-align: center;
+        padding: 40px 0 0;
+        color: $color_9;
+        font-size: 14px;
+    }
+}
+.register-bg {
+    width: 100%;
+    background-color: $color_claret;
+    img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
     }
 }

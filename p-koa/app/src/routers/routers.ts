@@ -10,11 +10,12 @@ const router: Router = new Router();
 const loginController: LoginController = new LoginController();
 
 router.get('/', (ctx, next): void => {
-    console.log(typeof ctx, typeof next);
     ctx.body = 'haha';
 });
 
 router.get('/login', loginController.login);
 router.post('/login/action', loginController.loginAction);
+router.get('/register', loginController.register);
+router.post('/register/action', loginController.registerAction);
 
 export default router;

@@ -5,7 +5,8 @@ import DBConfig from '../config/db.config';
  * @description 创建Mysql类接口
  */
 interface MysqlInterface {
-    query(sql: string, values: any): Promise<any>
+    init(): Promise<void>;
+    query(sql: string, values: any): Promise<any>;
 }
 
 /**
@@ -15,18 +16,40 @@ interface MysqlInterface {
 class Mysql implements MysqlInterface{
     private pool: any;
     constructor() {
+
+    }
+    /**
+     * @description 手动初始化
+     */
+    async init(): Promise<void> {
         this.pool = mysql.createPool({
             host: DBConfig.host,
             user: DBConfig.user,
             password: DBConfig.password,
             database: DBConfig.database
         });
+        /**
+         * @description 创建表user
+         */
+        const sql_create_table_user: string = `
+            create table if not exists users(
+                id INT UNSIGNED AUTO_INCREMENT,
+                name VARCHAR(100),
+                tel CHAR(11) NOT NULL,
+                password VARCHAR(100) NOT NULL,
+                create_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+                update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                icon VARCHAR(100),
+                PRIMARY KEY(id)
+            )ENGINE=InnoDB DEFAULT CHARSET=utf8
+        `;
+        await this.query(sql_create_table_user, {});
     }
     /**
      * @description 执行传入的sql语句
      * @param sql sql语句
      * @param values 新值
-     * @return Promse<any> 返回一个promise包装后的对象
+     * @return Promise<any> 返回一个promise包装后的对象
      */
     query(sql: string, values: any): Promise<any> {
         return new Promise((resolve, reject) => {
@@ -47,4 +70,6 @@ class Mysql implements MysqlInterface{
     }
 }
 
-export default Mysql;
+const pool: Mysql = new Mysql();
+
+export default pool;

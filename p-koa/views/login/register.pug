@@ -1,19 +1,19 @@
 extends ../includes/header.pug
 block content
     .login-body
-        .login-bg
-            img(src="/images/lbg1.jpg", alt="")
+        .register-bg
+            img(src="/images/rbg1.jpg", alt="")
         .login-wrapper
-            h2 账号登录
-            form(method="post", action="/login/action").login-form
+            h2 用户注册
+            form(method="post", action="/register/action").login-form
                 .login-group
                     input.login-input#modelTel(type="text", name="user['tel']" placeholder="手机号码")
                 .login-group
                     input.login-input#modelPwd(type="password", name="user['password']" placeholder="密码")
                 .login-group
-                    span.btn.btn-block.btn-info.btn-lg#submit 登录
+                    span.btn.btn-block.btn-info.btn-lg#submit 注册
                     .login-to-reg
-                        a(href="/register") 没有账号？立即注册
+                        a(href="/login") 已有账号，立即登录
         .login-footer
             p 技术支持：typescript + nodejs + koa2 + mysql + pug
     .modal.fade#modal(tabindex="-1", role="diglog")
