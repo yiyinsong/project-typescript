@@ -33,3 +33,4 @@ var Mysql = (function () {
     return Mysql;
 }());
 exports.default = Mysql;
+//# sourceMappingURL=mysql.js.map

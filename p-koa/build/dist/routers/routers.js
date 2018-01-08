@@ -11,3 +11,4 @@ router.get('/', function (ctx, next) {
 router.get('/login', loginController.login);
 router.post('/login/action', loginController.loginAction);
 exports.default = router;
+//# sourceMappingURL=routers.js.map
