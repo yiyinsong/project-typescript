@@ -35,9 +35,39 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var bcryptjs = require("bcryptjs");
+var model_user_1 = require("../../model/model.user");
+var modelUser = new model_user_1.default();
 var LoginController = (function () {
     function LoginController() {
+        this.passwordSaltRounds = 10;
     }
+    LoginController.prototype.encrypt = function (password) {
+        return __awaiter(this, void 0, void 0, function () {
+            var salt, hash;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4, bcryptjs.genSalt(this.passwordSaltRounds)];
+                    case 1:
+                        salt = _a.sent();
+                        return [4, bcryptjs.hash(password, salt)];
+                    case 2:
+                        hash = _a.sent();
+                        return [2, hash];
+                }
+            });
+        });
+    };
+    LoginController.prototype.validate = function (password, hash) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4, bcryptjs.compare(password, hash)];
+                    case 1: return [2, _a.sent()];
+                }
+            });
+        });
+    };
     LoginController.prototype.login = function (ctx, next) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
@@ -76,9 +106,20 @@ var LoginController = (function () {
     };
     LoginController.prototype.registerAction = function (ctx, next) {
         return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                ctx.body = ctx.request.body;
-                return [2];
+            var _user, bcryptjsPassword, _a, _b;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
+                    case 0:
+                        _user = ctx.request.body.user;
+                        return [4, this.encrypt(_user.password)];
+                    case 1:
+                        bcryptjsPassword = _c.sent();
+                        _b = (_a = console).log;
+                        return [4, modelUser.insertOne(_user.tel, bcryptjsPassword)];
+                    case 2:
+                        _b.apply(_a, [_c.sent()]);
+                        return [2];
+                }
             });
         });
     };

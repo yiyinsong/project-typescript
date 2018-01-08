@@ -1,3 +1,7 @@
+/**
+ * 前台登陆注册页面
+ * @interface LoginInterface
+ */
 interface LoginInterface {
     checkTel(): boolean;
     checkPwd(): boolean;
@@ -9,10 +13,9 @@ class Login implements LoginInterface {
 
     }
     /**
-     * @function alert
-     * @description  弹出提示
-     * @param text 
-     * @return JQuery<HTMLElement> 返回jquery对象
+     * 弹出提示
+     * @param {string} text
+     * @return {JQuery<HTMLElement>} 返回jquery对象
      */
     private alert(text: string): JQuery<HTMLElement> {
         return $('#modal').find('.alert-text').html(text).end().modal({
@@ -20,9 +23,8 @@ class Login implements LoginInterface {
         });
     }
     /**
-     * @function checkTel
-     * @description  验证手机号码
-     * @return boolean 验证是否通过
+     * 验证手机号码格式
+     * @return {boolean} 验证是否通过
      */
     checkTel(): boolean {
         if($('#modelTel').val() === '') {
@@ -36,9 +38,8 @@ class Login implements LoginInterface {
         }
     }
     /**
-     * @function checkPwd
-     * @description  验证密码
-     * @return boolean 验证是否通过
+     * 验证密码
+     * @return {boolean} 验证是否通过
      */
     checkPwd(): boolean {
         if($('#modelPwd').val() === '') {
@@ -52,9 +53,8 @@ class Login implements LoginInterface {
         }
     }
     /**
-     * @function submit
-     * @description  验证提交表单
-     * @return void
+     * 验证提交表单
+     * @return {void}
      */
     submitHandle = ():void =>  {
         if(!this.checkTel()) return;

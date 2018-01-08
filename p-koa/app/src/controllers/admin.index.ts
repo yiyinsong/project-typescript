@@ -1,5 +1,5 @@
 /*
- * @description 后台首页控制器
+ * 后台首页控制器
  */
 
 class AdminIndexController {

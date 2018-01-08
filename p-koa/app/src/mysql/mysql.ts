@@ -2,7 +2,8 @@ import * as mysql from 'mysql';
 import DBConfig from '../config/db.config';
 
 /**
- * @description 创建Mysql类接口
+ * Mysql类接口
+ * @interface MysqlInterface
  */
 interface MysqlInterface {
     init(): Promise<void>;
@@ -10,16 +11,18 @@ interface MysqlInterface {
 }
 
 /**
- * @description 创建Mysql类
+ * Mysql管理类
+ * @class Mysql
+ * @implements {MysqlInterface}
  */
-
 class Mysql implements MysqlInterface{
     private pool: any;
     constructor() {
 
     }
     /**
-     * @description 手动初始化
+     * 手动初始化mysql
+     * @returns {Promise<void>} 初始化结果
      */
     async init(): Promise<void> {
         this.pool = mysql.createPool({
@@ -28,9 +31,8 @@ class Mysql implements MysqlInterface{
             password: DBConfig.password,
             database: DBConfig.database
         });
-        /**
-         * @description 创建表user
-         */
+
+        // 如果没有相关表，创建表user
         const sql_create_table_user: string = `
             create table if not exists users(
                 id INT UNSIGNED AUTO_INCREMENT,
@@ -46,9 +48,9 @@ class Mysql implements MysqlInterface{
         await this.query(sql_create_table_user, {});
     }
     /**
-     * @description 执行传入的sql语句
-     * @param sql sql语句
-     * @param values 新值
+     * 执行传入的sql语句
+     * @param {string} sql sql语句
+     * @param {any} values 新值
      * @return Promise<any> 返回一个promise包装后的对象
      */
     query(sql: string, values: any): Promise<any> {

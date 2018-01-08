@@ -1,6 +1,3 @@
-/*
- * @description 路由
- */
 import * as Router from 'koa-router';
 
 import LoginController from '../controllers/login/login';
