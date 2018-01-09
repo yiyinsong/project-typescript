@@ -3,3 +3,4 @@ var AdminIndexController = (function () {
     }
     return AdminIndexController;
 }());
+//# sourceMappingURL=admin.index.js.map

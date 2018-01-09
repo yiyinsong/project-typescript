@@ -7,7 +7,7 @@ import DBConfig from '../config/db.config';
  */
 interface MysqlInterface {
     init(): Promise<void>;
-    query(sql: string, values: any): Promise<any>;
+    query(sql: string, values?: any): Promise<any>;
 }
 
 /**
@@ -53,7 +53,7 @@ class Mysql implements MysqlInterface{
      * @param {any} values 新值
      * @return Promise<any> 返回一个promise包装后的对象
      */
-    query(sql: string, values: any): Promise<any> {
+    query(sql: string, values?: any): Promise<any> {
         return new Promise((resolve, reject) => {
             this.pool.getConnection((err: any, connection: any) => {
                 if(err) {

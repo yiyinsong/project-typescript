@@ -84,9 +84,30 @@ var LoginController = (function () {
     };
     LoginController.prototype.loginAction = function (ctx, next) {
         return __awaiter(this, void 0, void 0, function () {
+            var _user, _r, _compare_result;
             return __generator(this, function (_a) {
-                ctx.body = ctx.request.body;
-                return [2];
+                switch (_a.label) {
+                    case 0:
+                        _user = ctx.request.body.user;
+                        return [4, modelUser.findPasswordByTel(_user.tel)];
+                    case 1:
+                        _r = _a.sent();
+                        if (!(_r.code === 1)) return [3, 3];
+                        return [4, this.validate(_user.password, _r.data.password)];
+                    case 2:
+                        _compare_result = _a.sent();
+                        if (_compare_result) {
+                            ctx.redirect('/');
+                        }
+                        else {
+                            ctx.body = '登录失败，密码错误';
+                        }
+                        return [3, 4];
+                    case 3:
+                        ctx.body = _r;
+                        _a.label = 4;
+                    case 4: return [2];
+                }
             });
         });
     };
@@ -106,18 +127,23 @@ var LoginController = (function () {
     };
     LoginController.prototype.registerAction = function (ctx, next) {
         return __awaiter(this, void 0, void 0, function () {
-            var _user, bcryptjsPassword, _a, _b;
-            return __generator(this, function (_c) {
-                switch (_c.label) {
+            var _user, _bcryptjsPassword, _r;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
                     case 0:
                         _user = ctx.request.body.user;
                         return [4, this.encrypt(_user.password)];
                     case 1:
-                        bcryptjsPassword = _c.sent();
-                        _b = (_a = console).log;
-                        return [4, modelUser.insertOne(_user.tel, bcryptjsPassword)];
+                        _bcryptjsPassword = _a.sent();
+                        return [4, modelUser.insertOne(_user.tel, _bcryptjsPassword)];
                     case 2:
-                        _b.apply(_a, [_c.sent()]);
+                        _r = _a.sent();
+                        if (_r.code === 1) {
+                            ctx.redirect('/login');
+                        }
+                        else {
+                            ctx.body = _r;
+                        }
                         return [2];
                 }
             });
@@ -126,3 +152,4 @@ var LoginController = (function () {
     return LoginController;
 }());
 exports.default = LoginController;
+//# sourceMappingURL=login.js.map

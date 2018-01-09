@@ -10,9 +10,17 @@ router.get('/', (ctx, next): void => {
     ctx.body = 'haha';
 });
 
-router.get('/login', loginController.login);
-router.post('/login/action', loginController.loginAction);
-router.get('/register', loginController.register);
-router.post('/register/action', loginController.registerAction);
+router.get('/login', async (ctx, next) => {
+    await loginController.login(ctx, next);
+});
+router.post('/login/action', async (ctx, next) => {
+    await loginController.loginAction(ctx, next);
+});
+router.get('/register', async (ctx, next) => {
+    await loginController.register(ctx, next);
+});
+router.post('/register/action', async (ctx, next) => {
+    await loginController.registerAction(ctx, next);
+});
 
 export default router;

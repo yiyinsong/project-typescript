@@ -39,23 +39,79 @@ var mysql_1 = require("../mysql/mysql");
 var ModelUser = (function () {
     function ModelUser() {
     }
-    ModelUser.prototype.insertOne = function (tel, password) {
+    ModelUser.prototype.findPasswordByTel = function (tel) {
         return __awaiter(this, void 0, void 0, function () {
-            var _sql_user_exit, _r;
+            var _sql_select_one, _r, err_1;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        _sql_user_exit = "select 1 from users where tel = " + tel + " limit 1";
-                        return [4, mysql_1.default.query(_sql_user_exit, {})];
+                        _a.trys.push([0, 2, , 3]);
+                        _sql_select_one = "select password from users where tel = " + tel;
+                        return [4, mysql_1.default.query(_sql_select_one)];
                     case 1:
                         _r = _a.sent();
                         if (_r.length > 0) {
-                            return [2, false];
+                            return [2, {
+                                    code: 1,
+                                    message: '查询成功',
+                                    data: {
+                                        password: _r[0].password
+                                    }
+                                }];
                         }
                         else {
-                            return [2, true];
+                            return [2, {
+                                    code: 0,
+                                    message: '用户不存在'
+                                }];
                         }
-                        return [2];
+                        return [3, 3];
+                    case 2:
+                        err_1 = _a.sent();
+                        return [2, {
+                                code: 0,
+                                message: '登录出错',
+                                data: err_1
+                            }];
+                    case 3: return [2];
+                }
+            });
+        });
+    };
+    ModelUser.prototype.insertOne = function (tel, password) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _sql_user_exit, _r, _sql_user_insert, _r_1, err_2;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 5, , 6]);
+                        _sql_user_exit = "select 1 from users where tel = " + tel + " limit 1";
+                        return [4, mysql_1.default.query(_sql_user_exit)];
+                    case 1:
+                        _r = _a.sent();
+                        if (!(_r.length > 0)) return [3, 2];
+                        return [2, {
+                                code: 0,
+                                message: '手机号码已注册过'
+                            }];
+                    case 2:
+                        _sql_user_insert = "insert into users (tel, password) values (\"" + tel + "\", \"" + password + "\")";
+                        return [4, mysql_1.default.query(_sql_user_insert)];
+                    case 3:
+                        _r_1 = !!(_a.sent());
+                        return [2, {
+                                code: _r_1 ? 1 : 0,
+                                message: _r_1 ? '注册成功' : '注册失败'
+                            }];
+                    case 4: return [3, 6];
+                    case 5:
+                        err_2 = _a.sent();
+                        return [2, {
+                                code: 0,
+                                message: '注册出错',
+                                data: err_2
+                            }];
+                    case 6: return [2];
                 }
             });
         });
@@ -63,3 +119,4 @@ var ModelUser = (function () {
     return ModelUser;
 }());
 exports.default = ModelUser;
+//# sourceMappingURL=model.user.js.map
