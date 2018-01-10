@@ -77,13 +77,15 @@ class LoginController implements LoginInterface{
         // 获取用户提交过来的数据
         const _user: UserDataInterface =  ctx.request.body.user;
         // 查询用户密码是否存在
-        const _r: DataInterface = await modelUser.findPasswordByTel(_user.tel);
+        const _r: DataInterface = await modelUser.findByTel(_user.tel);
         // 如果用户存在
         if(_r.code === 1) {
             // 比对数据库密码与传递过来密码
             const _compare_result: boolean = await this.validate(_user.password, _r.data.password);
             // 如果插入成功
             if(_compare_result) {
+                ctx.session.user = _r.data;
+                console.log(ctx.session.user);
                 ctx.redirect('/');
             } else {
                 ctx.body = '登录失败，密码错误';

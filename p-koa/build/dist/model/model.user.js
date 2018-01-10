@@ -39,14 +39,14 @@ var mysql_1 = require("../mysql/mysql");
 var ModelUser = (function () {
     function ModelUser() {
     }
-    ModelUser.prototype.findPasswordByTel = function (tel) {
+    ModelUser.prototype.findByTel = function (tel) {
         return __awaiter(this, void 0, void 0, function () {
             var _sql_select_one, _r, err_1;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
-                        _sql_select_one = "select password from users where tel = " + tel;
+                        _sql_select_one = "select * from users where tel = " + tel;
                         return [4, mysql_1.default.query(_sql_select_one)];
                     case 1:
                         _r = _a.sent();
@@ -54,9 +54,7 @@ var ModelUser = (function () {
                             return [2, {
                                     code: 1,
                                     message: '查询成功',
-                                    data: {
-                                        password: _r[0].password
-                                    }
+                                    data: _r[0]
                                 }];
                         }
                         else {

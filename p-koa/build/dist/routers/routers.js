@@ -41,7 +41,7 @@ var login_1 = require("../controllers/login/login");
 var router = new Router();
 var loginController = new login_1.default();
 router.get('/', function (ctx, next) {
-    ctx.body = 'haha';
+    ctx.body = ctx.session;
 });
 router.get('/login', function (ctx, next) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {

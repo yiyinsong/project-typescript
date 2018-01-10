@@ -89,7 +89,7 @@ var LoginController = (function () {
                 switch (_a.label) {
                     case 0:
                         _user = ctx.request.body.user;
-                        return [4, modelUser.findPasswordByTel(_user.tel)];
+                        return [4, modelUser.findByTel(_user.tel)];
                     case 1:
                         _r = _a.sent();
                         if (!(_r.code === 1)) return [3, 3];
@@ -97,6 +97,8 @@ var LoginController = (function () {
                     case 2:
                         _compare_result = _a.sent();
                         if (_compare_result) {
+                            ctx.session.user = _r.data;
+                            console.log(ctx.session.user);
                             ctx.redirect('/');
                         }
                         else {

@@ -1,37 +1,31 @@
-// Type definitions for ./node_modules/koa-mysql-session/index.js
-// Project: [LIBRARY_URL_HERE] 
-// Definitions by: [YOUR_NAME_HERE] <[YOUR_URL_HERE]> 
-// Definitions: https://github.com/borisyankov/DefinitelyTyped
+export = MysqlStore;
+
+declare var CREATE_STATEMENT : string;
 
 /**
  * 
  */
-export declare var CREATE_STATEMENT : string;
+declare var GET_STATEMENT : string;
 
 /**
  * 
  */
-export declare var GET_STATEMENT : string;
+declare var SET_STATEMENT : string;
 
 /**
  * 
  */
-export declare var SET_STATEMENT : string;
+declare var DELETE_STATEMENT : string;
 
 /**
  * 
  */
-export declare var DELETE_STATEMENT : string;
+declare var CLEANUP_STATEMENT : string;
 
 /**
  * 
  */
-export declare var CLEANUP_STATEMENT : string;
-
-/**
- * 
- */
-export declare var FORTY_FIVE_MINUTES : number;
+declare var FORTY_FIVE_MINUTES : number;
 
 /**
  * 
@@ -41,29 +35,17 @@ export declare var FORTY_FIVE_MINUTES : number;
  */
 declare function getExpiresOn(session : any, ttl : number): Date;
 
-/**
- * 
- */
-declare interface MysqlStore {
-		
-	/**
-	 * 
-	 * @param options 
-	 */
-	new (options : any);
-		
-	/**
-	 * 
-	 */
-	get : /* fn*(sid:?) */ any;
-		
-	/**
-	 * 
-	 */
-	set : /* fn*(sid:?,session:?,ttl:?) */ any;
-		
-	/**
-	 * 
-	 */
-	destroy : /* fn*(sid:?) */ any;
+interface MysqlStore {
+    (): MysqlStore;
+}
+declare namespace MysqlStore {
+	var pool: any;
+	function getConnection() :any;
+	function cleanup(): void;
+}
+declare class MysqlStore{
+    constructor(options: any);
+    get(sid: string): any;
+    set(sid: string, session: any, ttl: number): any;
+    destroy(sid: string): void;
 }

@@ -7,7 +7,7 @@ const router: Router = new Router();
 const loginController: LoginController = new LoginController();
 
 router.get('/', (ctx, next): void => {
-    ctx.body = 'haha';
+    ctx.body = ctx.session;
 });
 
 router.get('/login', async (ctx, next) => {

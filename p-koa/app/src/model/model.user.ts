@@ -11,17 +11,15 @@ class ModelUser {
      * @param {string} tel 手机号码
      * @returns {Promise<DataInterface>}
      */
-    async findPasswordByTel(tel: string): Promise<DataInterface> {
+    async findByTel(tel: string): Promise<DataInterface> {
        try {
-           const _sql_select_one: string = `select password from users where tel = ${tel}`;
-           const _r: {password: string}[] = await mysql.query(_sql_select_one);
+           const _sql_select_one: string = `select * from users where tel = ${tel}`;
+           const _r: any[] = await mysql.query(_sql_select_one);
             if(_r.length > 0) {
                 return {
                     code: 1,
                     message: '查询成功',
-                    data: {
-                        password: _r[0].password
-                    }
+                    data: _r[0]
                 }
             } else {
                 return {
