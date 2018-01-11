@@ -38,8 +38,18 @@ var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
 var Router = require("koa-router");
 var login_1 = require("../controllers/login/login");
+var index_1 = require("../controllers/admin/index/index");
 var router = new Router();
 var loginController = new login_1.default();
+var adminIndexController = new index_1.default();
+var fnIsLogin = function (ctx, next) { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4, loginController.alreadyLogged(ctx, next)];
+            case 1: return [2, _a.sent()];
+        }
+    });
+}); };
 router.get('/', function (ctx, next) {
     ctx.body = ctx.session;
 });
@@ -83,5 +93,34 @@ router.post('/register/action', function (ctx, next) { return __awaiter(_this, v
         }
     });
 }); });
+router.get('/logout', function (ctx, next) { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4, loginController.logout(ctx, next)];
+            case 1:
+                _a.sent();
+                return [2];
+        }
+    });
+}); });
+router.get('/admin', fnIsLogin, function (ctx, next) { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4, adminIndexController.init(ctx, next)];
+            case 1:
+                _a.sent();
+                return [2];
+        }
+    });
+}); });
+router.get('/admin/index', fnIsLogin, function (ctx, next) { return __awaiter(_this, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4, adminIndexController.init(ctx, next)];
+            case 1:
+                _a.sent();
+                return [2];
+        }
+    });
+}); });
 exports.default = router;
-//# sourceMappingURL=routers.js.map

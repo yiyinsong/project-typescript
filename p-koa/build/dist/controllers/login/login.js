@@ -151,7 +151,28 @@ var LoginController = (function () {
             });
         });
     };
+    LoginController.prototype.logout = function (ctx, next) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                ctx.session = null;
+                ctx.redirect('/login');
+                return [2];
+            });
+        });
+    };
+    LoginController.prototype.alreadyLogged = function (ctx, next) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                if (ctx.session.user) {
+                    return [2, next()];
+                }
+                else {
+                    ctx.redirect('/login');
+                }
+                return [2];
+            });
+        });
+    };
     return LoginController;
 }());
 exports.default = LoginController;
-//# sourceMappingURL=login.js.map

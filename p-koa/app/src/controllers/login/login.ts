@@ -21,6 +21,7 @@ interface LoginInterface {
     loginAction(ctx: any, next: any): Promise<void>;
     register(ctx: any, next: any): Promise<void>;
     registerAction(ctx: any, next: any): Promise<void>;
+    alreadyLogged(ctx: any, next: any): Promise<void>
 }
 
 /**
@@ -115,6 +116,21 @@ class LoginController implements LoginInterface{
             ctx.redirect('/login');
         } else {
             ctx.body = _r;
+        }
+    }
+    
+    //退出登录
+    async logout(ctx: any, next: any): Promise<void> {
+        ctx.session = null;
+        ctx.redirect('/login');
+    }
+
+    //是否登录校验
+    async alreadyLogged(ctx: any, next: any): Promise<any> {
+        if(ctx.session.user) {
+            return next();
+        } else {
+            ctx.redirect('/login');
         }
     }
 }
