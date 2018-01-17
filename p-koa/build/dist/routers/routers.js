@@ -124,3 +124,4 @@ router.get('/admin/index', fnIsLogin, function (ctx, next) { return __awaiter(_t
     });
 }); });
 exports.default = router;
+//# sourceMappingURL=routers.js.map

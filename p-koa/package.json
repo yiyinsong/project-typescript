@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "bower": "^1.8.2",
-    "browser-sync": "^2.21.0",
+    "browser-sync": "^2.23.5",
     "dtsmake": "0.0.10",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
@@ -18,7 +18,7 @@
     "gulp-flatten": "^0.3.1",
     "gulp-load-plugins": "^1.5.0",
     "gulp-nodemon": "^2.2.1",
-    "gulp-plumber": "^1.1.0",
+    "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-typescript": "^3.2.3",
@@ -29,7 +29,7 @@
   "dependencies": {
     "@types/bcryptjs": "^2.4.1",
     "@types/bootstrap": "^3.3.36",
-    "@types/jquery": "^3.2.17",
+    "@types/jquery": "^3.2.18",
     "@types/koa": "^2.0.43",
     "@types/koa-bodyparser": "^3.0.26",
     "@types/koa-router": "^7.0.27",

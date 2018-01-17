@@ -3,25 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="8fad0c4a-7ee9-4b75-bf98-3b0ace74cb47" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/p-koa/app/src/app.ts" afterPath="$PROJECT_DIR$/p-koa/app/src/app.ts" />
-      <change beforePath="$PROJECT_DIR$/p-koa/app/src/controllers/login/login.ts" afterPath="$PROJECT_DIR$/p-koa/app/src/controllers/login/login.ts" />
-      <change beforePath="$PROJECT_DIR$/p-koa/app/src/model/model.user.ts" afterPath="$PROJECT_DIR$/p-koa/app/src/model/model.user.ts" />
-      <change beforePath="$PROJECT_DIR$/p-koa/app/src/routers/routers.ts" afterPath="$PROJECT_DIR$/p-koa/app/src/routers/routers.ts" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/app.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/app.js" />
-      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/app.js.map" afterPath="$PROJECT_DIR$/p-koa/build/dist/app.js.map" />
-      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/app.min.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/app.min.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/common/interface.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/common/interface.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/config/db.config.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/config/db.config.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/controllers/admin/index/index.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/controllers/admin/index/index.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/controllers/login/login.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/controllers/login/login.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/controllers/login/login.js.map" afterPath="$PROJECT_DIR$/p-koa/build/dist/controllers/login/login.js.map" />
-      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/controllers/login/login.min.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/controllers/login/login.min.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/frontend/login.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/frontend/login.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/model/model.user.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/model/model.user.js" />
-      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/model/model.user.js.map" afterPath="$PROJECT_DIR$/p-koa/build/dist/model/model.user.js.map" />
-      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/model/model.user.min.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/model/model.user.min.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/mysql/mysql.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/mysql/mysql.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.js.map" afterPath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.js.map" />
-      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.min.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.min.js" />
-      <change beforePath="$PROJECT_DIR$/p-koa/d.ts/koa-mysql-session/index.d.ts" afterPath="$PROJECT_DIR$/p-koa/d.ts/koa-mysql-session/index.d.ts" />
-      <change beforePath="$PROJECT_DIR$/p-koa/package-lock.json" afterPath="$PROJECT_DIR$/p-koa/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/p-koa/package.json" afterPath="$PROJECT_DIR$/p-koa/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,20 +30,8 @@
       <file leaf-file-name="app.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p-koa/app/src/app.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.index.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p-koa/app/src/controllers/admin.index.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="464">
+              <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -60,9 +40,11 @@
       <file leaf-file-name="routers.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p-koa/app/src/routers/routers.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-              <folding />
+            <state relative-caret-position="1276">
+              <caret line="48" column="3" lean-forward="false" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+              <folding>
+                <marker date="1516167432023" expanded="true" signature="1300:1314" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,8 +52,8 @@
       <file leaf-file-name="login.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/p-koa/app/src/controllers/login/login.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2407">
-              <caret line="87" column="46" lean-forward="false" selection-start-line="87" selection-start-column="46" selection-end-line="87" selection-end-column="46" />
+            <state relative-caret-position="521">
+              <caret line="92" column="13" lean-forward="true" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -80,7 +62,7 @@
       <file leaf-file-name="model.user.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p-koa/app/src/model/model.user.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
+            <state relative-caret-position="580">
               <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
               <folding />
             </state>
@@ -159,7 +141,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/p-koa/package.json" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="123" />
     <option name="y" value="322" />
     <option name="width" value="1932" />
@@ -199,7 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -314,6 +295,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -379,24 +361,28 @@
       <workItem from="1515491496796" duration="1531000" />
       <workItem from="1515493462227" duration="159000" />
       <workItem from="1515549239201" duration="13114000" />
+      <workItem from="1516167557101" duration="75000" />
+      <workItem from="1516168908603" duration="8000" />
+      <workItem from="1516168933917" duration="2319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79707000" />
+    <option name="totallyTimeSpent" value="82109000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22339304" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21074815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -660,13 +646,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="0" column="678" lean-forward="false" selection-start-line="0" selection-start-column="664" selection-end-line="0" selection-end-column="678" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p-koa/app/src/model/model.user.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
+        <state relative-caret-position="580">
           <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding />
         </state>
@@ -674,34 +659,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/p-koa/app/src/routers/routers.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding />
+        <state relative-caret-position="1276">
+          <caret line="48" column="3" lean-forward="false" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+          <folding>
+            <marker date="1516167432023" expanded="true" signature="1300:1314" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p-koa/app/src/controllers/admin.index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/p-koa/app/src/controllers/admin.index.ts" />
     <entry file="file://$PROJECT_DIR$/p-koa/app/src/app.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="464">
+          <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p-koa/app/src/controllers/login/login.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2407">
-          <caret line="87" column="46" lean-forward="false" selection-start-line="87" selection-start-column="46" selection-end-line="87" selection-end-column="46" />
+        <state relative-caret-position="521">
+          <caret line="92" column="13" lean-forward="true" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
           <folding />
         </state>
       </provider>
