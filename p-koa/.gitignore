@@ -1,4 +1,4 @@
 /node_modules/*
 /.git/*
 /build/libs/*
-!/build/libs/iconfont/*
+!/build/libs/iconfont/
