@@ -5,12 +5,16 @@ import LoginController from '../controllers/login/login';
 import AdminIndexController from '../admin/controllers/index/index';
 import AdminUserController from '../admin/controllers/user/user';
 
+import APIUpload from '../api/upload';
+
 const router: Router = new Router();
 
 const loginController: LoginController = new LoginController();
 
 const adminIndexController: AdminIndexController = new AdminIndexController();
 const adminUserController: AdminUserController = new AdminUserController();
+
+const apiUpload: APIUpload = new APIUpload();
 
 const fnIsLogin = async (ctx: any, next: any): Promise<any> => {
     return await loginController.alreadyLogged(ctx, next);
@@ -52,6 +56,11 @@ router.get('/admin/index', fnIsLogin, async (ctx, next) => {
 //后台用户中心
 router.get('/admin/user', fnIsLogin, async (ctx, next) => {
     await adminUserController.editInfo(ctx, next);
+});
+
+//API图片上传
+router.post('/api/upload', async (ctx, next) => {
+    await apiUpload.start(ctx, next);
 });
 
 export default router;
