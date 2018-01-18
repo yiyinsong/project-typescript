@@ -2,13 +2,15 @@ import * as Router from 'koa-router';
 
 import LoginController from '../controllers/login/login';
 
-import AdminIndexCtroller from '../controllers/admin/index/index';
+import AdminIndexController from '../admin/controllers/index/index';
+import AdminUserController from '../admin/controllers/user/user';
 
 const router: Router = new Router();
 
 const loginController: LoginController = new LoginController();
 
-const adminIndexController: AdminIndexCtroller = new AdminIndexCtroller();
+const adminIndexController: AdminIndexController = new AdminIndexController();
+const adminUserController: AdminUserController = new AdminUserController();
 
 const fnIsLogin = async (ctx: any, next: any): Promise<any> => {
     return await loginController.alreadyLogged(ctx, next);
@@ -46,6 +48,10 @@ router.get('/admin', fnIsLogin, async (ctx, next) => {
 //后台框架页面
 router.get('/admin/index', fnIsLogin, async (ctx, next) => {
     await adminIndexController.init(ctx, next);
+});
+//后台用户中心
+router.get('/admin/user', fnIsLogin, async (ctx, next) => {
+    await adminUserController.editInfo(ctx, next);
 });
 
 export default router;

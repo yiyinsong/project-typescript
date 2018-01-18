@@ -26,7 +26,7 @@ class Login implements LoginInterface {
      * 验证手机号码格式
      * @return {boolean} 验证是否通过
      */
-    checkTel(): boolean {
+    public checkTel(): boolean {
         if($('#modelTel').val() === '') {
             this.alert('请填写电话号码');
             return false;
@@ -41,7 +41,7 @@ class Login implements LoginInterface {
      * 验证密码
      * @return {boolean} 验证是否通过
      */
-    checkPwd(): boolean {
+    public checkPwd(): boolean {
         if($('#modelPwd').val() === '') {
             this.alert('请填写密码');
             return false;
@@ -56,7 +56,7 @@ class Login implements LoginInterface {
      * 验证提交表单
      * @return {void}
      */
-    submitHandle = ():void =>  {
+    public submitHandle = ():void =>  {
         if(!this.checkTel()) return;
         if(!this.checkPwd()) return;
         $('form').submit();

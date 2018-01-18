@@ -117,4 +117,3 @@ var ModelUser = (function () {
     return ModelUser;
 }());
 exports.default = ModelUser;
-//# sourceMappingURL=model.user.js.map

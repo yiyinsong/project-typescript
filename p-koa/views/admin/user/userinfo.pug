@@ -1,0 +1,21 @@
+include ../includes/container
+    form(action="", method="get").user-form
+        .form-group
+            label 用户名称
+            input(type="text", placeholder="请输入用户名称")
+        .form-group
+            label 手机号码
+            input(type="text", placeholder="请输入用户手机号码")
+        .form-group
+            label 用户邮箱
+            input(type="email", placeholder="请输入用户邮箱")
+        .form-group
+            label 用户头像
+            .input-item
+                .form-upload
+                    input(type="file")
+                    span +
+                        img(src="")
+                    input(type="hidden")
+        .form-group-footer
+            button.btn.btn-primary(type="submit") 提交

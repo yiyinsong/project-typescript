@@ -176,4 +176,3 @@ var LoginController = (function () {
     return LoginController;
 }());
 exports.default = LoginController;
-//# sourceMappingURL=login.js.map

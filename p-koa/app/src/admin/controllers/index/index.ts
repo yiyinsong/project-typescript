@@ -15,7 +15,7 @@ class AdminIndexController implements AdminIndexInterface {
      * @param {*} next 
      * @returns {Promise<void>} 
      */
-    async init(ctx: any, next: any): Promise<void> {
+    public async init(ctx: any, next: any): Promise<void> {
         await ctx.render('admin/index/index', {
             title: '商城后台'
         });

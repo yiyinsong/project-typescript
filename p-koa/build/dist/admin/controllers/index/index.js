@@ -35,25 +35,16 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var mysql = require("mysql");
-var db_config_1 = require("../config/db.config");
-var Mysql = (function () {
-    function Mysql() {
+var AdminIndexController = (function () {
+    function AdminIndexController() {
     }
-    Mysql.prototype.init = function () {
+    AdminIndexController.prototype.init = function (ctx, next) {
         return __awaiter(this, void 0, void 0, function () {
-            var sql_create_table_user;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0:
-                        this.pool = mysql.createPool({
-                            host: db_config_1.default.host,
-                            user: db_config_1.default.user,
-                            password: db_config_1.default.password,
-                            database: db_config_1.default.database
-                        });
-                        sql_create_table_user = "\n            create table if not exists users(\n                id INT UNSIGNED AUTO_INCREMENT,\n                name VARCHAR(100),\n                tel CHAR(11) NOT NULL,\n                email VARCHAR(30),\n                password VARCHAR(100) NOT NULL,\n                create_date DATETIME DEFAULT CURRENT_TIMESTAMP,\n                update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n                icon VARCHAR(100),\n                PRIMARY KEY(id)\n            )ENGINE=InnoDB DEFAULT CHARSET=utf8\n        ";
-                        return [4, this.query(sql_create_table_user, {})];
+                    case 0: return [4, ctx.render('admin/index/index', {
+                            title: '商城后台'
+                        })];
                     case 1:
                         _a.sent();
                         return [2];
@@ -61,26 +52,6 @@ var Mysql = (function () {
             });
         });
     };
-    Mysql.prototype.query = function (sql, values) {
-        var _this = this;
-        return new Promise(function (resolve, reject) {
-            _this.pool.getConnection(function (err, connection) {
-                if (err) {
-                    resolve(err);
-                }
-                connection.query(sql, values, function (err, rows) {
-                    if (err) {
-                        reject(err);
-                    }
-                    else {
-                        resolve(rows);
-                    }
-                    connection.release();
-                });
-            });
-        });
-    };
-    return Mysql;
+    return AdminIndexController;
 }());
-var pool = new Mysql();
-exports.default = pool;
+exports.default = AdminIndexController;

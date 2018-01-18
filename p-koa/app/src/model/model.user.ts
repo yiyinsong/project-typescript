@@ -11,7 +11,7 @@ class ModelUser {
      * @param {string} tel 手机号码
      * @returns {Promise<DataInterface>}
      */
-    async findByTel(tel: string): Promise<DataInterface> {
+    public async findByTel(tel: string): Promise<DataInterface> {
        try {
            const _sql_select_one: string = `select * from users where tel = ${tel}`;
            const _r: any[] = await mysql.query(_sql_select_one);
@@ -41,7 +41,7 @@ class ModelUser {
      * @param {string} password 密码
      * @return {Promise<DataInterface>} DataInterface结构对象
      */
-    async insertOne(tel: string, password: string): Promise<DataInterface> {
+    public async insertOne(tel: string, password: string): Promise<DataInterface> {
         try {
             const _sql_user_exit: string = `select 1 from users where tel = ${tel} limit 1`;
             const _r: any[] = await mysql.query(_sql_user_exit);

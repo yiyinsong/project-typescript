@@ -24,7 +24,7 @@ class Mysql implements MysqlInterface{
      * 手动初始化mysql
      * @returns {Promise<void>} 初始化结果
      */
-    async init(): Promise<void> {
+    public async init(): Promise<void> {
         this.pool = mysql.createPool({
             host: DBConfig.host,
             user: DBConfig.user,
@@ -38,6 +38,7 @@ class Mysql implements MysqlInterface{
                 id INT UNSIGNED AUTO_INCREMENT,
                 name VARCHAR(100),
                 tel CHAR(11) NOT NULL,
+                email VARCHAR(30),
                 password VARCHAR(100) NOT NULL,
                 create_date DATETIME DEFAULT CURRENT_TIMESTAMP,
                 update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -53,7 +54,7 @@ class Mysql implements MysqlInterface{
      * @param {any} values 新值
      * @return Promise<any> 返回一个promise包装后的对象
      */
-    query(sql: string, values?: any): Promise<any> {
+    public query(sql: string, values?: any): Promise<any> {
         return new Promise((resolve, reject) => {
             this.pool.getConnection((err: any, connection: any) => {
                 if(err) {

@@ -37,4 +37,3 @@ app.use(session({
 app.use(routers_1.default.routes())
     .use(routers_1.default.allowedMethods());
 app.listen(3000);
-//# sourceMappingURL=app.js.map

@@ -1,3 +1,4 @@
+extends ./header
 block content
     .area-left
         .area-lt
@@ -7,7 +8,7 @@ block content
                     dl.clear
                         dt Canon
                         dd
-                            a(href="#").iconfont.icon-chilun
+                            a(href="/admin/user").iconfont.icon-chilun
                             div
                     span 13414059353
         .area-lb
@@ -18,3 +19,5 @@ block content
                     a(href="#").iconfont.icon-list 商品管理
                 li
                     a(href="#").iconfont.icon-comment 评论管理
+    .area-right
+        block content

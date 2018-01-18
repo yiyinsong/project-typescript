@@ -8,11 +8,11 @@
  * @static {string} database 项目数据库名称
  */
 class DBConfig {
-    static port:number = 3306;
-    static host:string = 'localhost';
-    static user:string = 'root';
-    static password:string = 'xiaosong999';
-    static database:string = 'koamall';
+    public static port:number = 3306;
+    public static host:string = 'localhost';
+    public static user:string = 'root';
+    public static password:string = 'xiaosong999';
+    public static database:string = 'koamall';
 }
 
 export default DBConfig;

@@ -67,14 +67,14 @@ class LoginController implements LoginInterface{
     
     
     // 渲染登录页面
-    async login(ctx: any, next: any): Promise<void>{
+    public async login(ctx: any, next: any): Promise<void>{
         await ctx.render('login/login', {
             title: '登录'
         });
     }
 
     // 登录处理
-    async loginAction(ctx: any, next: any): Promise<void>{
+    public async loginAction(ctx: any, next: any): Promise<void>{
         // 获取用户提交过来的数据
         const _user: UserDataInterface =  ctx.request.body.user;
         // 查询用户密码是否存在
@@ -97,14 +97,14 @@ class LoginController implements LoginInterface{
     }
 
     // 渲染注册页面
-    async register(ctx: any, next: any): Promise<void>{
+    public async register(ctx: any, next: any): Promise<void>{
         await ctx.render('login/register', {
             title: '注册'
         });
     }
 
     // 注册处理
-    async registerAction(ctx: any, next: any): Promise<void>{
+    public async registerAction(ctx: any, next: any): Promise<void>{
         // 获取用户提交过来的数据
         const _user: UserDataInterface =  ctx.request.body.user;
         // 加密传递过来的密码
@@ -120,13 +120,13 @@ class LoginController implements LoginInterface{
     }
     
     //退出登录
-    async logout(ctx: any, next: any): Promise<void> {
+    public async logout(ctx: any, next: any): Promise<void> {
         ctx.session = null;
         ctx.redirect('/login');
     }
 
     //是否登录校验
-    async alreadyLogged(ctx: any, next: any): Promise<any> {
+    public async alreadyLogged(ctx: any, next: any): Promise<any> {
         if(ctx.session.user) {
             return next();
         } else {

@@ -44,4 +44,3 @@ var Login = (function () {
 }());
 var login = new Login();
 $('#submit').on('click', login.submitHandle);
-//# sourceMappingURL=login.js.map
