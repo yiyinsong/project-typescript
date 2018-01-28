@@ -13,25 +13,15 @@ class Login implements LoginInterface {
 
     }
     /**
-     * 弹出提示
-     * @param {string} text
-     * @return {JQuery<HTMLElement>} 返回jquery对象
-     */
-    private alert(text: string): JQuery<HTMLElement> {
-        return $('#modal').find('.alert-text').html(text).end().modal({
-            show: true
-        });
-    }
-    /**
      * 验证手机号码格式
      * @return {boolean} 验证是否通过
      */
     public checkTel(): boolean {
         if($('#modelTel').val() === '') {
-            this.alert('请填写电话号码');
+            layer.alert('请填写电话号码');
             return false;
         } else if(!/^\d{11}$/.test(`${$('#modelTel').val()}`)) {
-            this.alert('电话号码格式错误');
+            layer.alert('电话号码格式错误');
             return false;
         } else {
             return true;
@@ -43,10 +33,10 @@ class Login implements LoginInterface {
      */
     public checkPwd(): boolean {
         if($('#modelPwd').val() === '') {
-            this.alert('请填写密码');
+            layer.alert('请填写密码');
             return false;
         } else if((''+$('#modelPwd').val()).length < 6) {
-            this.alert('密码长度不能小于6位');
+            layer.alert('密码长度不能小于6位');
             return false;
         } else {
             return true;

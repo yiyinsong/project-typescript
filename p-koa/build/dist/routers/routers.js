@@ -37,13 +37,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
 var Router = require("koa-router");
+var Multer = require("koa-multer");
 var login_1 = require("../controllers/login/login");
 var index_1 = require("../admin/controllers/index/index");
 var user_1 = require("../admin/controllers/user/user");
+var upload_1 = require("../api/upload");
 var router = new Router();
+var upload = Multer({ dest: './build/uploads' });
 var loginController = new login_1.default();
 var adminIndexController = new index_1.default();
 var adminUserController = new user_1.default();
+var apiUpload = new upload_1.default();
 var fnIsLogin = function (ctx, next) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
@@ -131,6 +135,19 @@ router.get('/admin/user', fnIsLogin, function (ctx, next) { return __awaiter(_th
             case 0: return [4, adminUserController.editInfo(ctx, next)];
             case 1:
                 _a.sent();
+                return [2];
+        }
+    });
+}); });
+router.post('/api/upload', upload.single('file'), function (ctx, next) { return __awaiter(_this, void 0, void 0, function () {
+    var _a;
+    return __generator(this, function (_b) {
+        switch (_b.label) {
+            case 0:
+                _a = ctx;
+                return [4, apiUpload.start(ctx, next)];
+            case 1:
+                _a.body = _b.sent();
                 return [2];
         }
     });

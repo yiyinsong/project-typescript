@@ -17,7 +17,8 @@ class AdminIndexController implements AdminIndexInterface {
      */
     public async init(ctx: any, next: any): Promise<void> {
         await ctx.render('admin/index/index', {
-            title: '商城后台'
+            title: '商城后台',
+            data: ctx.session.user || {}
         });
     }
 }

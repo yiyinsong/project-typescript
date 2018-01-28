@@ -35,15 +35,15 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var AdminIndexController = (function () {
-    function AdminIndexController() {
+var AdminUserInfo = (function () {
+    function AdminUserInfo() {
     }
-    AdminIndexController.prototype.init = function (ctx, next) {
+    AdminUserInfo.prototype.editInfo = function (ctx, next) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4, ctx.render('admin/index/index', {
-                            title: '商城后台',
+                    case 0: return [4, ctx.render('admin/user/userinfo', {
+                            title: '用户中心',
                             data: ctx.session.user || {}
                         })];
                     case 1:
@@ -53,6 +53,6 @@ var AdminIndexController = (function () {
             });
         });
     };
-    return AdminIndexController;
+    return AdminUserInfo;
 }());
-exports.default = AdminIndexController;
+exports.default = AdminUserInfo;

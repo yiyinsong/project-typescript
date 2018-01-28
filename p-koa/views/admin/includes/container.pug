@@ -6,11 +6,11 @@ block content
                 img(src="https://dummyimage.com/600x400/851736/fff", alt="")
                 div
                     dl.clear
-                        dt Canon
+                        dt #{data.name || '未命名'}
                         dd
                             a(href="/admin/user").iconfont.icon-chilun
                             div
-                    span 13414059353
+                    span #{data.tel}
         .area-lb
             ul
                 li.active

@@ -35,24 +35,23 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var AdminIndexController = (function () {
-    function AdminIndexController() {
+var fs = require("fs");
+var upload_config_1 = require("../config/upload.config");
+var Upload = (function () {
+    function Upload() {
     }
-    AdminIndexController.prototype.init = function (ctx, next) {
+    Upload.prototype.start = function (ctx, next) {
         return __awaiter(this, void 0, void 0, function () {
+            var r, fields, file, rootPaths, p, fileName, reader, writer, currentPath;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4, ctx.render('admin/index/index', {
-                            title: '商城后台',
-                            data: ctx.session.user || {}
-                        })];
-                    case 1:
-                        _a.sent();
-                        return [2];
-                }
+                return [2, {
+                        code: 1,
+                        message: '上传成功',
+                        data: ctx.request
+                    }];
             });
         });
     };
-    return AdminIndexController;
+    return Upload;
 }());
-exports.default = AdminIndexController;
+exports.default = Upload;
