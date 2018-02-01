@@ -1,14 +1,14 @@
 /**
  * 前台登陆注册页面
- * @interface LoginInterface
+ * @interface RegisterInterface
  */
-interface LoginInterface {
+interface RegisterInterface {
     checkTel(): boolean;
     checkPwd(): boolean;
     submitHandle(): void;
 }
 
-class Login implements LoginInterface {
+class Register implements RegisterInterface {
     constructor() {
 
     }
@@ -51,7 +51,7 @@ class Login implements LoginInterface {
         if(!this.checkPwd()) return;
         // $('form').submit();
         $.ajax({
-            url: '/login/action',
+            url: '/register/action',
             type: 'post',
             data: {
                 tel: $('#modelTel').val(),
@@ -62,12 +62,12 @@ class Login implements LoginInterface {
                 if(r.code === 0) {
                     layer.alert(r.message);
                 } else {
-                    window.location.href = '/';
+                    window.location.href = '/login';
                 }
             }
         });
     }
 }
 
-const login: Login = new Login();
-$('#submit').on('click', login.submitHandle);
+const register: Register = new Register();
+$('#submit').on('click', register.submitHandle);

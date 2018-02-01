@@ -5,11 +5,11 @@ block content
             img(src="/images/lbg1.jpg", alt="")
         .login-wrapper
             h2 账号登录
-            form(method="post", action="/login/action").login-form
+            form(method="post").login-form
                 .login-group
-                    input.login-input#modelTel(type="text", name="user[tel]" placeholder="手机号码")
+                    input.login-input#modelTel(type="text", placeholder="手机号码")
                 .login-group
-                    input.login-input#modelPwd(type="password", name="user[password]" placeholder="密码")
+                    input.login-input#modelPwd(type="password", placeholder="密码")
                 .login-group
                     span.btn.btn-block.btn-info.btn-lg#submit 登录
                     .login-to-reg

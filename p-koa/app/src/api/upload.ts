@@ -21,11 +21,6 @@ class Upload implements UploadInterface{
      */
     public async start(ctx: any, next: any): Promise<DataInterface> {
 
-        return {
-            code: 1,
-            message: '上传成功',
-            data: ctx.request
-        };
 
         let r: DataInterface;
 

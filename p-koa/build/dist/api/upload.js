@@ -44,11 +44,42 @@ var Upload = (function () {
         return __awaiter(this, void 0, void 0, function () {
             var r, fields, file, rootPaths, p, fileName, reader, writer, currentPath;
             return __generator(this, function (_a) {
-                return [2, {
+                fields = ctx.request.body.fields;
+                file = ctx.request.body.files.file;
+                if (!file) {
+                    r = {
+                        code: 0,
+                        message: '参数错误'
+                    };
+                }
+                else if (!fields.rootPath) {
+                    r = {
+                        code: 0,
+                        message: '请传入rootPath'
+                    };
+                }
+                else {
+                    rootPaths = (upload_config_1.default.path + fields.rootPath).split('/');
+                    p = '';
+                    while (rootPaths.length) {
+                        p += rootPaths.shift() + '/';
+                        if (!fs.existsSync(p)) {
+                            fs.mkdirSync(p);
+                        }
+                    }
+                    fileName = new Date().getTime() + file.name.substr(file.name.lastIndexOf('.'));
+                    reader = fs.createReadStream(file.path);
+                    writer = fs.createWriteStream(upload_config_1.default.path + fields.rootPath + '/' + fileName);
+                    reader.pipe(writer);
+                    currentPath = upload_config_1.default.webPath + fields.rootPath + '/' + fileName;
+                    r = {
                         code: 1,
                         message: '上传成功',
-                        data: ctx.request
-                    }];
+                        data: ctx.request.body
+                    };
+                    return [2, r];
+                }
+                return [2];
             });
         });
     };

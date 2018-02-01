@@ -1,5 +1,5 @@
-var Login = (function () {
-    function Login() {
+var Register = (function () {
+    function Register() {
         var _this = this;
         this.submitHandle = function () {
             if (!_this.checkTel())
@@ -7,7 +7,7 @@ var Login = (function () {
             if (!_this.checkPwd())
                 return;
             $.ajax({
-                url: '/login/action',
+                url: '/register/action',
                 type: 'post',
                 data: {
                     tel: $('#modelTel').val(),
@@ -19,13 +19,13 @@ var Login = (function () {
                         layer.alert(r.message);
                     }
                     else {
-                        window.location.href = '/';
+                        window.location.href = '/login';
                     }
                 }
             });
         };
     }
-    Login.prototype.checkTel = function () {
+    Register.prototype.checkTel = function () {
         if ($('#modelTel').val() === '') {
             layer.alert('请填写电话号码');
             return false;
@@ -38,7 +38,7 @@ var Login = (function () {
             return true;
         }
     };
-    Login.prototype.checkPwd = function () {
+    Register.prototype.checkPwd = function () {
         if ($('#modelPwd').val() === '') {
             layer.alert('请填写密码');
             return false;
@@ -51,7 +51,7 @@ var Login = (function () {
             return true;
         }
     };
-    return Login;
+    return Register;
 }());
-var login = new Login();
-$('#submit').on('click', login.submitHandle);
+var register = new Register();
+$('#submit').on('click', register.submitHandle);

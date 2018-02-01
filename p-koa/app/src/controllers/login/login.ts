@@ -76,21 +76,28 @@ class LoginController implements LoginInterface{
     // 登录处理
     public async loginAction(ctx: any, next: any): Promise<void>{
         // 获取用户提交过来的数据
-        const _user: UserDataInterface =  ctx.request.body.user;
+        const _user: UserDataInterface =  ctx.request.body;
         // 查询用户密码是否存在
         const _r: DataInterface = await modelUser.findByTel(_user.tel);
         // 如果用户存在
         if(_r.code === 1) {
+            let _r2: DataInterface;
             // 比对数据库密码与传递过来密码
             const _compare_result: boolean = await this.validate(_user.password, _r.data.password);
             // 如果插入成功
             if(_compare_result) {
                 ctx.session.user = _r.data;
-                console.log(ctx.session.user);
-                ctx.redirect('/');
+                _r2 = {
+                    code: 1,
+                    message: '登录成功'
+                }
             } else {
-                ctx.body = '登录失败，密码错误';
+                _r2 = {
+                    code: 0,
+                    message: '密码错误'
+                };
             }
+            ctx.body = _r2;
         } else {
             ctx.body = _r;
         }
@@ -106,17 +113,22 @@ class LoginController implements LoginInterface{
     // 注册处理
     public async registerAction(ctx: any, next: any): Promise<void>{
         // 获取用户提交过来的数据
-        const _user: UserDataInterface =  ctx.request.body.user;
+        const _user: UserDataInterface =  ctx.request.body;
         // 加密传递过来的密码
         const _bcryptjsPassword: string = await this.encrypt(_user.password);
         // 向数据库中插入一条数据
         const _r: DataInterface = await modelUser.insertOne(_user.tel, _bcryptjsPassword);
+        let _r2: DataInterface;
         // 如果插入成功
         if(_r.code === 1) {
-            ctx.redirect('/login');
+            _r2 = {
+                code: 1,
+                message: '注册成功'
+            };
         } else {
-            ctx.body = _r;
+            _r2 = _r;
         }
+        ctx.body = _r;
     }
     
     //退出登录

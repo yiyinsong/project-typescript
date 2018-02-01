@@ -136,11 +136,11 @@ var LoginController = (function () {
     };
     LoginController.prototype.registerAction = function (ctx, next) {
         return __awaiter(this, void 0, void 0, function () {
-            var _user, _bcryptjsPassword, _r, _r2;
+            var _user, _bcryptjsPassword, _r;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        _user = ctx.request.body;
+                        _user = ctx.request.body.user;
                         return [4, this.encrypt(_user.password)];
                     case 1:
                         _bcryptjsPassword = _a.sent();
@@ -148,15 +148,11 @@ var LoginController = (function () {
                     case 2:
                         _r = _a.sent();
                         if (_r.code === 1) {
-                            _r2 = {
-                                code: 1,
-                                message: '注册成功'
-                            };
+                            ctx.redirect('/login');
                         }
                         else {
-                            _r2 = _r;
+                            ctx.body = _r;
                         }
-                        ctx.body = _r;
                         return [2];
                 }
             });
@@ -187,3 +183,4 @@ var LoginController = (function () {
     return LoginController;
 }());
 exports.default = LoginController;
+//# sourceMappingURL=register.js.map
