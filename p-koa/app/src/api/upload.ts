@@ -21,7 +21,6 @@ class Upload implements UploadInterface{
      */
     public async start(ctx: any, next: any): Promise<DataInterface> {
 
-
         let r: DataInterface;
 
         const fields = ctx.request.body.fields;

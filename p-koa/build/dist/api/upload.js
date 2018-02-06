@@ -86,3 +86,4 @@ var Upload = (function () {
     return Upload;
 }());
 exports.default = Upload;
+//# sourceMappingURL=upload.js.map

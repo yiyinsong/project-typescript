@@ -44,3 +44,4 @@ var User = (function () {
 }());
 var user = new User();
 user.init();
+//# sourceMappingURL=user.js.map

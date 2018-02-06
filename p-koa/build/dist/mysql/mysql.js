@@ -66,18 +66,25 @@ var Mysql = (function () {
         return new Promise(function (resolve, reject) {
             _this.pool.getConnection(function (err, connection) {
                 if (err) {
-                    resolve(err);
+                    reject(err);
                 }
-                connection.query(sql, values, function (err, rows) {
-                    if (err) {
-                        reject(err);
-                    }
-                    else {
-                        resolve(rows);
-                    }
-                    connection.release();
-                });
+                if (connection) {
+                    connection.query(sql, values, function (err, rows) {
+                        if (err) {
+                            reject(err);
+                        }
+                        else {
+                            resolve(rows);
+                        }
+                        connection.release();
+                    });
+                }
+                else {
+                    reject(err);
+                }
             });
+        }).catch(function (err) {
+            console.log(err);
         });
     };
     return Mysql;

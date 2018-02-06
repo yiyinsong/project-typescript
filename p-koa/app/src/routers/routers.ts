@@ -9,7 +9,7 @@ import AdminUserController from '../admin/controllers/user/user';
 import APIUpload from '../api/upload';
 
 const router: Router = new Router();
-const upload = Multer({dest:'./build/uploads'});
+const upload = Multer({dest:'./build/uploads/'});
 
 const loginController: LoginController = new LoginController();
 
@@ -61,8 +61,9 @@ router.get('/admin/user', fnIsLogin, async (ctx, next) => {
 });
 
 //API图片上传
-router.post('/api/upload', upload.single('file'), async (ctx, next) => {
-    ctx.body = await apiUpload.start(ctx, next);
+router.post('/api/upload', upload.single('avatar'), async (ctx, next) => {
+    console.log('11111');
+    // ctx.body = await apiUpload.start(ctx, next);
 }); 
 
 export default router;

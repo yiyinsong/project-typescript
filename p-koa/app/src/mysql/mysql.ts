@@ -58,17 +58,23 @@ class Mysql implements MysqlInterface{
         return new Promise((resolve, reject) => {
             this.pool.getConnection((err: any, connection: any) => {
                 if(err) {
-                    resolve(err);
+                    reject(err);
                 }
-                connection.query(sql, values, ( err: any, rows: any) => {
-                    if (err) {
-                      reject(err);
-                    } else {
-                      resolve(rows);
-                    }
-                    connection.release()
-                });
+                if(connection) {
+                    connection.query(sql, values, ( err: any, rows: any) => {
+                        if (err) {
+                            reject(err);
+                        } else {
+                            resolve(rows);
+                        }
+                        connection.release()
+                    });
+                } else {
+                    reject(err);
+                }
             });
+        }).catch( err => {
+            console.log(err);
         });
     }
 }
