@@ -38,16 +38,23 @@ var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
 var Router = require("koa-router");
 var Multer = require("koa-multer");
+var path = require("path");
 var login_1 = require("../controllers/login/login");
 var index_1 = require("../admin/controllers/index/index");
 var user_1 = require("../admin/controllers/user/user");
-var upload_1 = require("../api/upload");
 var router = new Router();
-var upload = Multer({ dest: './build/uploads/' });
+var storage = Multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, "./build/uploads/");
+    },
+    filename: function (req, file, cb) {
+        cb(null, Date.now() + path.extname(file.originalname));
+    }
+});
+var upload = Multer({ storage: storage });
 var loginController = new login_1.default();
 var adminIndexController = new index_1.default();
 var adminUserController = new user_1.default();
-var apiUpload = new upload_1.default();
 var fnIsLogin = function (ctx, next) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
@@ -139,11 +146,26 @@ router.get('/admin/user', fnIsLogin, function (ctx, next) { return __awaiter(_th
         }
     });
 }); });
-router.post('/api/upload', upload.single('avatar'), function (ctx, next) { return __awaiter(_this, void 0, void 0, function () {
+router.post('/admin/user/saveinfo', function (ctx, next) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
-        console.log('11111');
+        switch (_a.label) {
+            case 0: return [4, adminUserController.saveInfo(ctx, next)];
+            case 1:
+                _a.sent();
+                return [2];
+        }
+    });
+}); });
+router.post('/api/upload', upload.single('imgs'), function (ctx, next) { return __awaiter(_this, void 0, void 0, function () {
+    var r;
+    return __generator(this, function (_a) {
+        r = {
+            code: 1,
+            message: '上传成功',
+            data: "/uploads/" + ctx.req.file.filename
+        };
+        ctx.body = r;
         return [2];
     });
 }); });
 exports.default = router;
-//# sourceMappingURL=routers.js.map

@@ -35,20 +35,57 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var model_user_1 = require("../../../model/model.user");
+var modelUser = new model_user_1.default();
 var AdminUserInfo = (function () {
     function AdminUserInfo() {
     }
     AdminUserInfo.prototype.editInfo = function (ctx, next) {
         return __awaiter(this, void 0, void 0, function () {
+            var _info;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4, ctx.render('admin/user/userinfo', {
-                            title: '用户中心',
-                            data: ctx.session.user || {}
-                        })];
+                    case 0: return [4, modelUser.findByTel(ctx.session.user.tel)];
                     case 1:
+                        _info = _a.sent();
+                        return [4, ctx.render('admin/user/userinfo', {
+                                title: '用户中心',
+                                data: _info.data || {}
+                            })];
+                    case 2:
                         _a.sent();
                         return [2];
+                }
+            });
+        });
+    };
+    AdminUserInfo.prototype.saveInfo = function (ctx, next) {
+        return __awaiter(this, void 0, void 0, function () {
+            var info;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        info = ctx.request.body;
+                        if (!(info.name == '')) return [3, 1];
+                        ctx.body = '请填写用户名称';
+                        return [3, 6];
+                    case 1:
+                        if (!(info.tel == '')) return [3, 2];
+                        ctx.body = '用户不存在';
+                        return [3, 6];
+                    case 2:
+                        if (!(info.email == '')) return [3, 3];
+                        ctx.body = '请填写用户邮箱';
+                        return [3, 6];
+                    case 3:
+                        if (!(info.icon == '')) return [3, 4];
+                        ctx.body = '请上传用户头像';
+                        return [3, 6];
+                    case 4: return [4, modelUser.infoSave(ctx, info)];
+                    case 5:
+                        _a.sent();
+                        _a.label = 6;
+                    case 6: return [2];
                 }
             });
         });
@@ -56,4 +93,3 @@ var AdminUserInfo = (function () {
     return AdminUserInfo;
 }());
 exports.default = AdminUserInfo;
-//# sourceMappingURL=user.js.map

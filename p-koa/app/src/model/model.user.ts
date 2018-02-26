@@ -1,5 +1,5 @@
 import mysql from '../mysql/mysql';
-import {DataInterface} from "../common/interface";
+import { DataInterface } from "../common/interface";
 
 
 class ModelUser {
@@ -64,6 +64,19 @@ class ModelUser {
                 message: '注册出错',
                 data: err
             };
+        }
+    }
+    public async infoSave(ctx: any, info: any) {
+        try {
+            const _sql_info_save: string = `update users set name='${info.name}',email='${info.email}',icon='${info.icon}' where tel=${info.tel} limit 1`;
+            const _r = !!await mysql.query(_sql_info_save);
+            if(_r) {
+                ctx.redirect('/admin');
+            } else {
+                ctx.body = '更新失败';
+            }
+        } catch (err) {
+            ctx.body = err;
         }
     }
 }

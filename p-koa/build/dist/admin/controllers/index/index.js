@@ -35,18 +35,24 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var model_user_1 = require("../../../model/model.user");
+var modelUser = new model_user_1.default();
 var AdminIndexController = (function () {
     function AdminIndexController() {
     }
     AdminIndexController.prototype.init = function (ctx, next) {
         return __awaiter(this, void 0, void 0, function () {
+            var _info;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4, ctx.render('admin/index/index', {
-                            title: '商城后台',
-                            data: ctx.session.user || {}
-                        })];
+                    case 0: return [4, modelUser.findByTel(ctx.session.user.tel)];
                     case 1:
+                        _info = _a.sent();
+                        return [4, ctx.render('admin/index/index', {
+                                title: '商城后台',
+                                data: _info.data || {}
+                            })];
+                    case 2:
                         _a.sent();
                         return [2];
                 }
@@ -56,4 +62,3 @@ var AdminIndexController = (function () {
     return AdminIndexController;
 }());
 exports.default = AdminIndexController;
-//# sourceMappingURL=index.js.map

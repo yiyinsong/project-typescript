@@ -114,7 +114,33 @@ var ModelUser = (function () {
             });
         });
     };
+    ModelUser.prototype.infoSave = function (ctx, info) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _sql_info_save, _r, err_3;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        _sql_info_save = "update users set name='" + info.name + "',email='" + info.email + "',icon='" + info.icon + "' where tel=" + info.tel + " limit 1";
+                        return [4, mysql_1.default.query(_sql_info_save)];
+                    case 1:
+                        _r = !!(_a.sent());
+                        if (_r) {
+                            ctx.redirect('/admin');
+                        }
+                        else {
+                            ctx.body = '更新失败';
+                        }
+                        return [3, 3];
+                    case 2:
+                        err_3 = _a.sent();
+                        ctx.body = err_3;
+                        return [3, 3];
+                    case 3: return [2];
+                }
+            });
+        });
+    };
     return ModelUser;
 }());
 exports.default = ModelUser;
-//# sourceMappingURL=model.user.js.map

@@ -22,7 +22,22 @@ class User implements UserInterface{
      * @method init
      */
     public init() {
-        $('#iconFile').on('change', (e) => this.uploadImg(e));
+        $('#iconFile').on('change', e => this.uploadImg(e));
+        $('#submit').on('click', e => {
+            if($('input[name=name]').val() == '') {
+               return layer.alert('请填写用户名称');
+            }
+            const _val_email = `${$('input[name=email]').val()}`;
+            if(_val_email == '') {
+                return layer.alert('请填写用户邮箱');
+            } else if(!/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/.test(_val_email)) {
+                return layer.alert('邮箱格式错误');
+            }
+            if($('input[name=icon]').val() == '') {
+                return layer.alert('请上传用户头像');
+            }
+            $('form').submit();
+        });
     }
     /**
      * 上传图片
@@ -32,8 +47,7 @@ class User implements UserInterface{
     private uploadImg(e: any) {
         if($(e.target).val() === '') return;
 		let formData = new FormData();
-		formData.append('file', e.target.files[0]);
-		formData.append('rootPath', 'user');
+		formData.append('imgs', e.target.files[0]);
 		$.ajax({
 			url: '/api/upload',
 			type: 'post',
@@ -43,8 +57,8 @@ class User implements UserInterface{
 			contentType: false
 		}).done((res) => {
 			if(res.code === 1) {
-				$('#iconImg').attr('src', res.path).addClass('active');
-				$('input[name=icon]').val(res.path);
+				$('#iconImg').attr('src', res.data).addClass('active');
+				$('input[name=icon]').val(res.data);
 			} else {
 				console.log(res.message);
 			}

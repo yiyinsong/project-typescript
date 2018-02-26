@@ -3,18 +3,43 @@
   <component name="ChangeListManager">
     <list default="true" id="8fad0c4a-7ee9-4b75-bf98-3b0ace74cb47" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/p-koa/app/sass/admin/styles.scss" afterPath="$PROJECT_DIR$/p-koa/app/sass/admin/styles.scss" />
+      <change beforePath="$PROJECT_DIR$/p-koa/app/src/admin/controllers/index/index.ts" afterPath="$PROJECT_DIR$/p-koa/app/src/admin/controllers/index/index.ts" />
+      <change beforePath="$PROJECT_DIR$/p-koa/app/src/admin/controllers/user/user.ts" afterPath="$PROJECT_DIR$/p-koa/app/src/admin/controllers/user/user.ts" />
+      <change beforePath="$PROJECT_DIR$/p-koa/app/src/admin/frontend/user/user.ts" afterPath="$PROJECT_DIR$/p-koa/app/src/admin/frontend/user/user.ts" />
+      <change beforePath="$PROJECT_DIR$/p-koa/app/src/api/upload.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/p-koa/app/src/config/upload.config.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/p-koa/app/src/model/model.user.ts" afterPath="$PROJECT_DIR$/p-koa/app/src/model/model.user.ts" />
+      <change beforePath="$PROJECT_DIR$/p-koa/app/src/routers/routers.ts" afterPath="$PROJECT_DIR$/p-koa/app/src/routers/routers.ts" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/css/admin/styles.min.css" afterPath="$PROJECT_DIR$/p-koa/build/css/admin/styles.min.css" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/index/index.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/index/index.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/index/index.js.map" afterPath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/index/index.js.map" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/index/index.min.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/index/index.min.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/user/user.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/user/user.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/user/user.js.map" afterPath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/user/user.js.map" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/user/user.min.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/user/user.min.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/admin/frontend/user/user.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/admin/frontend/user/user.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/admin/frontend/user/user.js.map" afterPath="$PROJECT_DIR$/p-koa/build/dist/admin/frontend/user/user.js.map" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/admin/frontend/user/user.min.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/admin/frontend/user/user.min.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/app.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/app.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/common/interface.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/common/interface.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/config/db.config.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/config/db.config.js" />
-      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/config/upload.config.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/config/upload.config.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/controllers/login/login.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/controllers/login/login.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/frontend/login.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/frontend/login.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/frontend/register.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/frontend/register.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/model/model.user.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/model/model.user.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/model/model.user.js.map" afterPath="$PROJECT_DIR$/p-koa/build/dist/model/model.user.js.map" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/model/model.user.min.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/model/model.user.min.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/mysql/mysql.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/mysql/mysql.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.js.map" afterPath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.js.map" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.min.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.min.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/uploads/0b3fa0e298fad6fa5622bef302806477" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/uploads/30a2e1bb728150a66830535a74c5bfea" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/uploads/74783436968ca385475f40bb2e40233b" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/uploads/b74361095b51f2620ca52b4831395832" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/p-koa/views/admin/includes/container.pug" afterPath="$PROJECT_DIR$/p-koa/views/admin/includes/container.pug" />
+      <change beforePath="$PROJECT_DIR$/p-koa/views/admin/user/userinfo.pug" afterPath="$PROJECT_DIR$/p-koa/views/admin/user/userinfo.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,11 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="upload.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/p-koa/app/src/api/upload.ts">
+      <file leaf-file-name="user.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p-koa/app/src/admin/frontend/user/user.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-117">
-              <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+            <state relative-caret-position="1102">
+              <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -41,8 +66,97 @@
       <file leaf-file-name="routers.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p-koa/app/src/routers/routers.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1450">
-              <caret line="58" column="59" lean-forward="false" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
+            <state relative-caret-position="2088">
+              <caret line="72" column="48" lean-forward="false" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+                <marker date="1519631270616" expanded="true" signature="957:2395" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p-koa/app/src/admin/controllers/user/user.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="45" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p-koa/app/src/admin/controllers/index/index.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p-koa/views/admin/index/index.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="container.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p-koa/views/admin/includes/container.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p-koa/app/src/controllers/login/login.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model.user.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p-koa/app/src/model/model.user.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p-koa/app/sass/admin/styles.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="30" column="10" lean-forward="false" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userinfo.pug" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/p-koa/views/admin/user/userinfo.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="18" column="69" lean-forward="false" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -67,12 +181,14 @@
       <find>inter</find>
       <find>MysqlStore</find>
       <find>UserDataInterface</find>
-      <find>DataInterface</find>
       <find>tel</find>
       <find>login</find>
       <find>multer</find>
       <find>connection.query</find>
       <find>uploadImg</find>
+      <find>apiUpload</find>
+      <find>DataInterface</find>
+      <find>form-upload</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,15 +223,9 @@
         <option value="$PROJECT_DIR$/p-koa/README.md" />
         <option value="$PROJECT_DIR$/p-koa/node_modules/@types/koa-mysql-session/index.d.ts" />
         <option value="$PROJECT_DIR$/p-koa/app/src/app.ts" />
-        <option value="$PROJECT_DIR$/p-koa/app/src/admin/controllers/index/index.ts" />
-        <option value="$PROJECT_DIR$/p-koa/app/src/model/model.user.ts" />
         <option value="$PROJECT_DIR$/p-koa/app/src/admin/controllers/user/userinfo.ts" />
         <option value="$PROJECT_DIR$/p-koa/views/admin/includes/left.pug" />
         <option value="$PROJECT_DIR$/p-koa/app/src/config/db.config.ts" />
-        <option value="$PROJECT_DIR$/p-koa/app/src/admin/controllers/user/user.ts" />
-        <option value="$PROJECT_DIR$/p-koa/views/admin/includes/container.pug" />
-        <option value="$PROJECT_DIR$/p-koa/views/admin/user/userinfo.pug" />
-        <option value="$PROJECT_DIR$/p-koa/app/sass/admin/styles.scss" />
         <option value="$PROJECT_DIR$/p-koa/app/src/frontend/login.ts" />
         <option value="$PROJECT_DIR$/p-koa/app/src/controllers/login/register.ts" />
         <option value="$PROJECT_DIR$/p-koa/views/login/login.pug" />
@@ -123,9 +233,16 @@
         <option value="$PROJECT_DIR$/p-koa/app/src/frontend/register.ts" />
         <option value="$PROJECT_DIR$/p-koa/app/src/controllers/login/login.ts" />
         <option value="$PROJECT_DIR$/p-koa/app/src/mysql/mysql.ts" />
+        <option value="$PROJECT_DIR$/p-koa/app/src/api/upload.ts" />
+        <option value="$PROJECT_DIR$/p-koa/app/src/config/upload.config.ts" />
+        <option value="$PROJECT_DIR$/p-koa/app/sass/admin/styles.scss" />
         <option value="$PROJECT_DIR$/p-koa/app/src/routers/routers.ts" />
         <option value="$PROJECT_DIR$/p-koa/app/src/admin/frontend/user/user.ts" />
-        <option value="$PROJECT_DIR$/p-koa/app/src/api/upload.ts" />
+        <option value="$PROJECT_DIR$/p-koa/app/src/model/model.user.ts" />
+        <option value="$PROJECT_DIR$/p-koa/app/src/admin/controllers/user/user.ts" />
+        <option value="$PROJECT_DIR$/p-koa/app/src/admin/controllers/index/index.ts" />
+        <option value="$PROJECT_DIR$/p-koa/views/admin/includes/container.pug" />
+        <option value="$PROJECT_DIR$/p-koa/views/admin/user/userinfo.pug" />
       </list>
     </option>
   </component>
@@ -139,8 +256,8 @@
     <dismissed value="$PROJECT_DIR$/p-koa/package.json" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="313" />
-    <option name="y" value="161" />
+    <option name="x" value="43" />
+    <option name="y" value="446" />
     <option name="width" value="1932" />
     <option name="height" value="667" />
   </component>
@@ -178,8 +295,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -235,6 +350,35 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="p-koa" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="p-koa" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="p-koa" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -246,22 +390,6 @@
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
-              <item name="typescript" type="462c0819:PsiDirectoryNode" />
-              <item name="p-koa" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
-              <item name="typescript" type="462c0819:PsiDirectoryNode" />
-              <item name="p-koa" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
@@ -286,36 +414,51 @@
               <item name="p-koa" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
-              <item name="typescript" type="462c0819:PsiDirectoryNode" />
-              <item name="p-koa" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
               <item name="typescript" type="462c0819:PsiDirectoryNode" />
               <item name="p-koa" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
               <item name="typescript" type="462c0819:PsiDirectoryNode" />
               <item name="p-koa" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routers" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="p-koa" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="p-koa" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="p-koa" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -399,11 +542,12 @@
       <workItem from="1517795350684" duration="10000" />
       <workItem from="1517908359703" duration="3303000" />
       <workItem from="1519611680816" duration="252000" />
+      <workItem from="1519616162645" duration="12438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98140000" />
+    <option name="totallyTimeSpent" value="110578000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -414,6 +558,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -429,7 +574,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -474,14 +618,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/standard/app/sass/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/standard/build/dist/test.min.js" />
     <entry file="file://$PROJECT_DIR$/standard/app/src/test.ts" />
     <entry file="file://$PROJECT_DIR$/standard/package.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -622,13 +758,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p-koa/app/src/controllers/admin.index.ts" />
-    <entry file="file://$PROJECT_DIR$/p-koa/views/admin/index/index.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/p-koa/app/sass/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1624">
@@ -636,31 +765,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p-koa/app/src/admin/controllers/index/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/p-koa/views/admin/includes/container.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p-koa/app/src/admin/controllers/user/user.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p-koa/app/src/model/model.user.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1218">
-          <caret line="43" column="11" lean-forward="false" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -678,31 +786,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p-koa/views/admin/includes/container.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/p-koa/app/src/common/interface.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
           <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p-koa/views/admin/user/userinfo.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p-koa/app/sass/admin/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4408">
-          <caret line="192" column="32" lean-forward="false" selection-start-line="192" selection-start-column="32" selection-end-line="192" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -735,13 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p-koa/app/src/controllers/login/login.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="69" column="59" lean-forward="true" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/p-koa/app/src/mysql/mysql.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -749,33 +829,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p-koa/app/src/app.ts">
+    <entry file="file://$PROJECT_DIR$/p-koa/build/dist/routers/routers.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" column="46" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p-koa/app/src/admin/frontend/user/user.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+        <state relative-caret-position="326">
+          <caret line="0" column="1729" lean-forward="false" selection-start-line="0" selection-start-column="1729" selection-end-line="0" selection-end-column="1729" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p-koa/app/src/routers/routers.ts">
+    <entry file="file://$PROJECT_DIR$/p-koa/app/src/app.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1450">
-          <caret line="58" column="59" lean-forward="false" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
+        <state relative-caret-position="116">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p-koa/app/src/api/upload.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-117">
-          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+        <state relative-caret-position="638">
+          <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p-koa/app/src/config/upload.config.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p-koa/app/src/routers/routers.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2088">
+          <caret line="72" column="48" lean-forward="false" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <marker date="1519631270616" expanded="true" signature="957:2395" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p-koa/app/sass/admin/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="30" column="10" lean-forward="false" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p-koa/app/src/model/model.user.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p-koa/app/src/controllers/login/login.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p-koa/app/src/admin/frontend/user/user.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1102">
+          <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p-koa/app/src/admin/controllers/user/user.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="45" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p-koa/app/src/admin/controllers/index/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p-koa/views/admin/index/index.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p-koa/views/admin/includes/container.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p-koa/views/admin/user/userinfo.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="18" column="69" lean-forward="false" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
           <folding />
         </state>
       </provider>

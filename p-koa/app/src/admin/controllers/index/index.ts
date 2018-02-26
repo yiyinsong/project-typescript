@@ -1,6 +1,11 @@
 /*
  * 后台首页控制器
  */
+
+import ModelUser from "../../../model/model.user";
+
+const modelUser: ModelUser = new ModelUser();
+
 interface AdminIndexInterface {
     init(ctx: any, next: any): Promise<void>
 }
@@ -16,9 +21,10 @@ class AdminIndexController implements AdminIndexInterface {
      * @returns {Promise<void>} 
      */
     public async init(ctx: any, next: any): Promise<void> {
+        const _info = await modelUser.findByTel(ctx.session.user.tel);
         await ctx.render('admin/index/index', {
             title: '商城后台',
-            data: ctx.session.user || {}
+            data: _info.data || {}
         });
     }
 }
