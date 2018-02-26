@@ -91,3 +91,4 @@ var Mysql = (function () {
 }());
 var pool = new Mysql();
 exports.default = pool;
+//# sourceMappingURL=mysql.js.map

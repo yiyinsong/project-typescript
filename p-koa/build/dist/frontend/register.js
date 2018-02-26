@@ -55,3 +55,4 @@ var Register = (function () {
 }());
 var register = new Register();
 $('#submit').on('click', register.submitHandle);
+//# sourceMappingURL=register.js.map

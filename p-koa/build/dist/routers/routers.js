@@ -146,3 +146,4 @@ router.post('/api/upload', upload.single('avatar'), function (ctx, next) { retur
     });
 }); });
 exports.default = router;
+//# sourceMappingURL=routers.js.map

@@ -56,3 +56,4 @@ var AdminUserInfo = (function () {
     return AdminUserInfo;
 }());
 exports.default = AdminUserInfo;
+//# sourceMappingURL=user.js.map

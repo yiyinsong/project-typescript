@@ -56,3 +56,4 @@ var AdminIndexController = (function () {
     return AdminIndexController;
 }());
 exports.default = AdminIndexController;
+//# sourceMappingURL=index.js.map

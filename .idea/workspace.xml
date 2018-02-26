@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fad0c4a-7ee9-4b75-bf98-3b0ace74cb47" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/p-koa/app/src/api/upload.ts" afterPath="$PROJECT_DIR$/p-koa/app/src/api/upload.ts" />
-      <change beforePath="$PROJECT_DIR$/p-koa/app/src/mysql/mysql.ts" afterPath="$PROJECT_DIR$/p-koa/app/src/mysql/mysql.ts" />
-      <change beforePath="$PROJECT_DIR$/p-koa/app/src/routers/routers.ts" afterPath="$PROJECT_DIR$/p-koa/app/src/routers/routers.ts" />
-      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/admin/frontend/user/user.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/admin/frontend/user/user.js" />
-      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/api/upload.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/api/upload.js" />
-      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/api/upload.js.map" afterPath="$PROJECT_DIR$/p-koa/build/dist/api/upload.js.map" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/index/index.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/index/index.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/user/user.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/admin/controllers/user/user.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/app.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/app.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/common/interface.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/common/interface.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/config/db.config.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/config/db.config.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/config/upload.config.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/config/upload.config.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/controllers/login/login.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/controllers/login/login.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/frontend/login.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/frontend/login.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/frontend/register.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/frontend/register.js" />
+      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/model/model.user.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/model/model.user.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/mysql/mysql.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/mysql/mysql.js" />
-      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/mysql/mysql.js.map" afterPath="$PROJECT_DIR$/p-koa/build/dist/mysql/mysql.js.map" />
-      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/mysql/mysql.min.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/mysql/mysql.min.js" />
       <change beforePath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.js" />
-      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.js.map" afterPath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.js.map" />
-      <change beforePath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.min.js" afterPath="$PROJECT_DIR$/p-koa/build/dist/routers/routers.min.js" />
-      <change beforePath="$PROJECT_DIR$/p-koa/package-lock.json" afterPath="$PROJECT_DIR$/p-koa/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/p-koa/package.json" afterPath="$PROJECT_DIR$/p-koa/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,7 +31,7 @@
       <file leaf-file-name="upload.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/p-koa/app/src/api/upload.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
+            <state relative-caret-position="-117">
               <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
               <folding />
             </state>
@@ -43,11 +41,9 @@
       <file leaf-file-name="routers.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p-koa/app/src/routers/routers.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
+            <state relative-caret-position="1450">
               <caret line="58" column="59" lean-forward="false" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -142,7 +138,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/p-koa/package.json" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="313" />
     <option name="y" value="161" />
     <option name="width" value="1932" />
@@ -182,6 +178,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -318,8 +316,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -402,14 +398,15 @@
       <workItem from="1517795329124" duration="8000" />
       <workItem from="1517795350684" duration="10000" />
       <workItem from="1517908359703" duration="3303000" />
+      <workItem from="1519611680816" duration="252000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97888000" />
+    <option name="totallyTimeSpent" value="98140000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -749,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="75" column="26" lean-forward="false" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -757,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="3" column="46" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -771,17 +766,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/p-koa/app/src/routers/routers.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
+        <state relative-caret-position="1450">
           <caret line="58" column="59" lean-forward="false" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p-koa/app/src/api/upload.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
+        <state relative-caret-position="-117">
           <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding />
         </state>

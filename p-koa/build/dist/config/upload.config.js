@@ -8,3 +8,4 @@ var UploadConfig = (function () {
     return UploadConfig;
 }());
 exports.default = UploadConfig;
+//# sourceMappingURL=upload.config.js.map
